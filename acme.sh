@@ -6891,7 +6891,7 @@ _getARICertID() {
   # but Sectigo (ZeroSSL) is strict and rejects newOrder with HTTP 401
   # "replaces field does not identify a certificate" if the byte is missing.
   case "$_ser" in
-    [89aAbBcCdDeEfF]*) _ser="00$_ser" ;;
+  [89aAbBcCdDeEfF]*) _ser="00$_ser" ;;
   esac
 
   _akiurl="$(echo "$_aki" | _h2b | _base64 | _url_replace)"
